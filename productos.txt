@@ -1,0 +1,2 @@
+producto 1,500.0,1
+producto 2,1200.0,2
