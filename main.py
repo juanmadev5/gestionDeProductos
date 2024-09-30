@@ -9,7 +9,7 @@ def añadir_producto():
             if precio < 0:
                 raise ValueError("El precio no puede ser negativo.")
             break
-        except ValueError as e:
+        except ValueError:
             print(f"Entrada inválida. Por favor, ingrese un número válido para el precio.")
 
     while True:
@@ -18,7 +18,7 @@ def añadir_producto():
             if cantidad < 0:
                 raise ValueError("La cantidad no puede ser negativa.")
             break
-        except ValueError as e:
+        except ValueError:
             print(f"Entrada inválida. Por favor, ingrese un número válido para la cantidad.")
     producto = {
         'nombre': nombre,
@@ -70,7 +70,7 @@ def actualizar_producto():
                     raise ValueError("El precio no puede ser negativo.")
                 productos[prodNum]['precio'] = nuevo_precio
                 break
-            except ValueError as e:
+            except ValueError:
                 print(f"Entrada inválida. Por favor, ingrese un número válido para el precio.")
         else:
             break
@@ -84,7 +84,7 @@ def actualizar_producto():
                     raise ValueError("La cantidad no puede ser negativa.")
                 productos[prodNum]['cantidad'] = nueva_cantidad
                 break
-            except ValueError as e:
+            except ValueError:
                 print(f"Entrada inválida. Por favor, ingrese un número válido para la cantidad.")
         else:
             break
